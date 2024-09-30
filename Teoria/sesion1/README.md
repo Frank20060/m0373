@@ -4,7 +4,7 @@
 - [x] h1 - h6 (Títulos)
 - [x] p (Párrafo)
 - [x] nav (Para poner un navegador)
-- [x] 
+- [x] img (Imagenes)
 - [x] 
 
 
