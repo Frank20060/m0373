@@ -23,6 +23,13 @@
         .colorgreen{
             background-color: greenyellow;
         }
+        td, th, table{
+
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 5px;
+
+        }
     </style>
 </head>
 <body>
@@ -35,12 +42,29 @@
     <input type="text" value="value del input">
     <button id="enviar">ENVIAR</button>
 
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+
+    </table>
+
+
     <script>
         //La etiqueta scipt sirve para ejecutar scripts desde la pagina de html
 
         console.log("Hola desde mi html");
     </script>
-    <script src="index2.js">
+    <script src="index.js">
         //Si le pones src al scrip linkeas el html con la paguina en la que tienes el codigo js
 
 

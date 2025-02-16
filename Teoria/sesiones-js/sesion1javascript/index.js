@@ -76,3 +76,57 @@ function alertaClick(){
     console.log("Has hecho click en el boton")
     alert("Has hecho click!!!!!!!") //  Abre una ventana de alerta con el texto que quieras poner
 }
+
+/// Creamos una matriz de objetos y accedemos a sus propiedades
+
+const almunosDAW = [
+    {
+        nombre: "Paco",
+        apellido: "Sanchez Alcaraz",
+        edad: 20,
+        notas: [7, 8, 9]
+    },
+    {
+        nombre: "Pepa",
+        apellido: "Sanchez Alcaraz",
+        edad: 22,
+        notas: [6, 2, 3]
+
+    },
+    {
+        nombre: "Andrés",
+        apellido: "Sanchez Heredia",
+        edad: 20,
+        notas: [4, 5, 10]
+
+    },
+    {
+        nombre: "Sofia",
+        apellido: "Sanchez Heredia",
+        edad: 20,
+        notas: [4, 5, 10]
+
+    }
+]
+
+//Acceder a los elementos de un array de objetos
+
+console.log("Segundo alumn@ " + almunosDAW[1].notas[0])
+
+///Cuando queramos poner un texto donde queramos respear los saltos de lineas en vez de usar las comillas normales utilizamos lis acentos ``
+
+
+///Usamos un bucle para generar los tr
+let filasBody = "";
+for(let i = 0; i<almunosDAW.length; i++){
+    console.log(i)
+    filasBody = filasBody + 
+    `<tr>
+        <td>${i}</td>
+        <td>${almunosDAW[i].nombre}</td>
+        <td>${almunosDAW[i].apellido}</td>
+    </tr>`
+}
+
+const miTabla = document.querySelector("tbody")
+miTabla.innerHTML= filasBody
