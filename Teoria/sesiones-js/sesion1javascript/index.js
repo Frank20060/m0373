@@ -117,12 +117,13 @@ console.log("Segundo alumn@ " + almunosDAW[1].notas[0])
 
 
 ///Usamos un bucle para generar los tr
+///${} es para poner el contenido de una variable en el texto
 let filasBody = "";
 for(let i = 0; i<almunosDAW.length; i++){
     console.log(i)
     filasBody = filasBody + 
     `<tr>
-        <td>${i}</td>
+        <td>${i}</td>  
         <td>${almunosDAW[i].nombre}</td>
         <td>${almunosDAW[i].apellido}</td>
     </tr>`
