@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle</title>
+</head>
+<body>
+    <h1>Página detalle</h1>
+
+    <h2>Nombre: <span id="nombre">...</span></h2>
+    <h3>Email: <span id="email">...</span></h3>
+
+
+
+    <script>
+        // Creamos un array con 5 objetos que contienen datos de usuarios
+        const usuarios = [
+            { id: 1, nombre: "Juan", edad: 25, email: "juan@example.com" },
+            { id: 2, nombre: "María", edad: 30, email: "maria@example.com" },
+            { id: 3, nombre: "Pedro", edad: 35, email: "pedro@example.com" },
+            { id: 4, nombre: "Ana", edad: 28, email: "ana@example.com" },
+            { id: 5, nombre: "Luis", edad: 32, email: "luis@example.com" }
+        ];
+
+        // Imprime un mensaje en la consola para verificar que el script se está ejecutando
+        console.log("Hola mundo detalles")
+
+        // Guardamos la URL completa de la página actual
+        const url = window.location
+        console.log("URL completa: ", url)
+
+        // Creamos un objeto URLSearchParams para manejar los parámetros de la URL ()
+        const parametros = new URLSearchParams(url.search);
+        console.log("Parámetros: ", parametros)
+
+        // Obtenemos el valor del parámetro 'nombre' de la URL
+        const name = parametros.get("nombre")
+        console.log("Nombre: ", name)
+                
+        //Lo mimso que con el nombre pero con una variable id
+        const id = parametros.get("id")
+        console.log("ID: ", id)
+        if(id){
+        //Guardamos el nombre y el email del usuario con el id que hemos obtenido
+        const nombre = usuarios[id-1].nombre
+        const email = usuarios[id-1].email
+
+        // Mostramos el nombre y el email en el HTML
+        document.querySelector('#nombre').innerHTML = nombre
+        document.querySelector('#email').innerHTML = email 
+            
+        }else{
+            console.log("No hay id")
+
+        }
+
+     
+
+
+
+    </script>
+
+</body>
+</html>

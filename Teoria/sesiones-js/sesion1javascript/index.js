@@ -42,8 +42,8 @@ console.log("El nombre del alumno es:", alumno.nombre)
 //  Capturamos en variables los diferentes elementos del dom
 /*Para seleccionar cual quier consa del documento html se utiliza : document.querySelector("etiqueta")*/
 
-const divcont1 = document.querySelector("#contenido1");
-console.log("Este es el objeto correspondiente al div #contenido 1: ",divcont1)
+const divcont1 = document.("#contenido1");
+console.log("Este es el objeto correspondiente al div #contenidquerySelectoro 1: ",divcont1)
 
 //  Mostramos por consola el objeto en forma de texto
 
@@ -91,21 +91,18 @@ const almunosDAW = [
         apellido: "Sanchez Alcaraz",
         edad: 22,
         notas: [6, 2, 3]
-
     },
     {
         nombre: "Andrés",
         apellido: "Sanchez Heredia",
         edad: 20,
         notas: [4, 5, 10]
-
     },
     {
         nombre: "Sofia",
         apellido: "Sanchez Heredia",
         edad: 20,
         notas: [4, 5, 10]
-
     }
 ]
 
@@ -115,11 +112,10 @@ console.log("Segundo alumn@ " + almunosDAW[1].notas[0])
 
 ///Cuando queramos poner un texto donde queramos respear los saltos de lineas en vez de usar las comillas normales utilizamos lis acentos ``
 
-
 ///Usamos un bucle para generar los tr
 ///${} es para poner el contenido de una variable en el texto
 let filasBody = "";
-for(let i = 0; i<almunosDAW.length; i++){
+for(let i = 0; i<3; i++){
     console.log(i)
     filasBody = filasBody + 
     `<tr>
